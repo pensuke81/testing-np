@@ -1,0 +1,16 @@
+{
+  "name": "testing-np",
+  "version": "0.0.0",
+  "description": "Test np",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "release": "np --no-publish --yolo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "np": "^9.2.0"
+  }
+}
