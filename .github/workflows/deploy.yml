@@ -1,7 +1,7 @@
 name: Deployment
 
 concurrency:
-  group: production
+  group: ${{ github.ref_type == 'tag' && 'production' || 'development' }}
   cancel-in-progress: true
 
 on:
