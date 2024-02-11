@@ -1,0 +1,19 @@
+name: Deployment
+
+concurrency:
+  group: production
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+      - development
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_type == 'tag' && 'production' || 'development' }}
+    steps:
+      - name: deploy
+        run: echo 'Deploying to ${{ vars.ENVIRONMENT_NAME }}!'
